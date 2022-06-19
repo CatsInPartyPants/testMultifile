@@ -4,6 +4,7 @@
 #define HEADER_H_
 
 const int Len = 40;
+const int LenArr = 5;
 
 struct golf
 {

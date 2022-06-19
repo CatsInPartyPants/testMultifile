@@ -5,15 +5,30 @@ using std::cout;
 
 int main()
 {
+    setlocale(LC_ALL, "ru");
     golf myGolf;
+    golf arrGolf[LenArr];
+    int count_of_users = 0;
     setgolf(myGolf, "John Cina", 20);
     showgolf(myGolf);
-    golf TestInteractive;
-    int result = setgolf(TestInteractive);
-    if (result == 0)
+    cout << "Заполняем массив Гольф:\n";
+    for (int i = 0; i < LenArr; i++)
     {
-        cout << "! Empty name! Error!" << std::endl;
+        int result = setgolf(arrGolf[i]);
+        if (result == 1)
+        {
+            count_of_users++;
+            
+        }
+        else if (result == 0) {
+            cout << "Stop!";
+            break;
+        }
     }
-    showgolf(TestInteractive);
+
+    for (int i = 0; i < count_of_users; i++)
+    {
+        showgolf(arrGolf[i]);
+    }
 
 }

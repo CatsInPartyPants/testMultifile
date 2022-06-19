@@ -21,7 +21,9 @@ int setgolf(golf& g)
 	{
 		strcpy_s(g.fullname, n);
 		g.handicap = hc;
+		cin.get();
 		return 1;
+		
 	}
 	else
 	{
